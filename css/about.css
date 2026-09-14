@@ -1,0 +1,210 @@
+.about {
+    padding-top: 110px;
+    padding-bottom: 80px;
+    flex: 1;
+}
+
+.section_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about_content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about_photo {
+    flex: 0 0 320px;
+    width: 320px;
+    height: 380px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-alt));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.about_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about_photo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent);
+}
+
+.about_info {
+    flex: 1;
+}
+
+.about_info p {
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.about_bio {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.about_edu_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about_edu_title i {
+    font-size: 26px;
+    color: var(--accent);
+}
+
+.about_edu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about_edu_item {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_edu_item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+}
+
+.about_edu_name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.about_edu_text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about_edu_year {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.12);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .about_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_photo {
+        flex: none;
+        width: 260px;
+        height: 310px;
+    }
+
+    .section_title {
+        font-size: 26px;
+    }
+}
+
+/* ========================================================= */
+/* ---------- Секция Skills (Умения) ---------- */
+.skills {
+    padding-bottom: 80px;
+}
+
+.skills_subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 640px;
+    margin: -20px auto 40px;
+}
+
+.skills_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.skills_card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 24px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills_card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow);
+}
+
+.skills_card_icon {
+    display: inline-block;
+    font-size: 46px;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.skills_card_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.skills_card_text {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .skills_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .skills_grid {
+        grid-template-columns: 1fr;
+    }
+}
