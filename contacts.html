@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем общие стили для всех страниц -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем стили страницы «Контакты» -->
+    <link rel="stylesheet" href="css/contacts.css">
+    <!-- Подключаем иконки Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <title>Контакты | A.Pavlov</title>
+</head>
+
+<body>
+    <!-- Шапка сайта с навигационной панелью -->
+    <header class="header">
+        <div class="container header_inner">
+            <!-- Логотип / название сайта -->
+            <a href="index.html" class="logo">A.Pavlov</a>
+
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="index.html" class="nav_link">Главная</a></li>
+                    <li class="nav_item"><a href="about.html" class="nav_link">О себе</a></li>
+                    <li class="nav_item"><a href="services.html" class="nav_link">Услуги</a></li>
+                    <li class="nav_item"><a href="projects.html" class="nav_link">Проекты</a></li>
+                    <li class="nav_item"><a href="contacts.html" class="nav_link nav_link--active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной блок страницы контактов -->
+    <main class="contacts">
+        <div class="container">
+            <h2 class="section_title">Мои <span>Контакты</span></h2>
+            <p class="contacts_subtitle">Готов к сотрудничеству — напишите мне, и я отвечу в ближайшее время</p>
+
+            <!-- Сетка карточек с контактами -->
+            <div class="contacts_grid">
+                <!-- Контакт: email -->
+                <article class="contact_card">
+                    <i class="bx bxs-envelope contact_card_icon"></i>
+                    <h3 class="contact_card_title">Email</h3>
+                    <p class="contact_card_text">a.pavlov@example.com</p>
+                    <a href="mailto:a.pavlov@example.com" class="contact_card_link">Написать <i class="bx bx-right-arrow-alt"></i></a>
+                </article>
+
+                <!-- Контакт: telegram -->
+                <article class="contact_card">
+                    <i class="bx bxl-telegram contact_card_icon"></i>
+                    <h3 class="contact_card_title">Telegram</h3>
+                    <p class="contact_card_text">@apavlov_ba</p>
+                    <a href="https://t.me/apavlov_ba" target="_blank" rel="noopener" class="contact_card_link">Открыть чат <i class="bx bx-right-arrow-alt"></i></a>
+                </article>
+
+                <!-- Контакт: github -->
+                <article class="contact_card">
+                    <i class="bx bxl-github contact_card_icon"></i>
+                    <h3 class="contact_card_title">GitHub</h3>
+                    <p class="contact_card_text">github.com/apavlov_ba</p>
+                    <a href="https://github.com/apavlov_ba" target="_blank" rel="noopener" class="contact_card_link">Открыть профиль <i class="bx bx-right-arrow-alt"></i></a>
+                </article>
+
+                <!-- Контакт: локация -->
+                <article class="contact_card">
+                    <i class="bx bxs-map contact_card_icon"></i>
+                    <h3 class="contact_card_title">Локация</h3>
+                    <p class="contact_card_text">Москва, Россия. Готов к удалённой работе.</p>
+                    <span class="contact_card_link">По всему миру <i class="bx bx-globe"></i></span>
+                </article>
+            </div>
+
+            <!-- Блок с формой обратной связи и доп. информацией -->
+            <div class="contacts_bottom">
+                <!-- Форма обратной связи. Сайт статический, без бэкенда, поэтому письмо формируется в почтовом клиенте через mailto. -->
+                <form class="contact_form" action="mailto:a.pavlov@example.com" method="post" enctype="text/plain">
+                    <h3 class="contact_form_title">Форма обратной связи</h3>
+                    <p class="contact_form_subtitle">Опишите задачу — отвечу в течение 24 часов</p>
+
+                    <div class="form_group">
+                        <label for="contact-name">Ваше имя</label>
+                        <input type="text" id="contact-name" name="Имя" placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="contact-email">Ваш email</label>
+                        <input type="email" id="contact-email" name="Email" placeholder="ivan@example.com" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="contact-message">Сообщение</label>
+                        <textarea id="contact-message" name="Сообщение" placeholder="Опишите вашу задачу или вопрос…" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">Отправить сообщение <i class="bx bxs-send"></i></button>
+                </form>
+
+                <!-- Блок «Я на связи» -->
+                <aside class="contacts_info">
+                    <h3 class="contacts_info_title">Я на связи</h3>
+                    <p class="contacts_info_text">Системный аналитик с опытом проектирования процессов, требований и интеграций. Открыт к обсуждению новых задач и проектов.</p>
+
+                    <ul class="contacts_info_list">
+                        <li><i class="bx bx-time-five"></i> Отвечаю в течение 24 часов в будние дни</li>
+                        <li><i class="bx bxs-briefcase-alt"></i> Рассматриваю предложения о сотрудничестве</li>
+                        <li><i class="bx bxs-file-doc"></i> Полное резюме вышлю по запросу</li>
+                    </ul>
+
+                    <!-- Соцсети -->
+                    <div class="contacts_info_socials">
+                        <a href="mailto:a.pavlov@example.com" title="Email" class="contacts_info_social"><i class="bx bxs-envelope"></i></a>
+                        <a href="https://t.me/apavlov_ba" target="_blank" rel="noopener" title="Telegram" class="contacts_info_social"><i class="bx bxl-telegram"></i></a>
+                        <a href="https://github.com/apavlov_ba" target="_blank" rel="noopener" title="GitHub" class="contacts_info_social"><i class="bx bxl-github"></i></a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </footer>
+</body>
+</html>

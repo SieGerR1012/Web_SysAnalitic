@@ -1,0 +1,280 @@
+/* ========================================================= */
+/* ---------- Секция Contacts (Контакты) ---------- */
+/* Основной блок страницы — растягивается между шапкой и подвалом */
+.contacts {
+    padding-top: 110px;
+    padding-bottom: 80px;
+    flex: 1;
+}
+
+/* Заголовок страницы */
+.section_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section_title span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Подзаголовок под заголовком */
+.contacts_subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 640px;
+    margin: -20px auto 40px;
+}
+
+/* Сетка карточек контактов: четыре в ряд на десктопе */
+.contacts_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+/* Карточка контакта */
+.contact_card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 24px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact_card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow);
+}
+
+/* Иконка контакта */
+.contact_card_icon {
+    display: inline-block;
+    font-size: 46px;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+/* Название: Email / Telegram / GitHub / Локация */
+.contact_card_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+/* Значение контакта */
+.contact_card_text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+
+/* Ссылка на контакт */
+.contact_card_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.contact_card_link i {
+    font-size: 18px;
+    transition: transform 0.3s linear;
+}
+
+.contact_card:hover .contact_card_link i {
+    transform: translateX(6px);
+}
+
+/* ---------- Блок формы и информации ---------- */
+.contacts_bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Форма обратной связи */
+.contact_form {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    box-shadow: var(--card-shadow);
+}
+
+.contact_form_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.contact_form_subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.form_group {
+    margin-bottom: 18px;
+}
+
+.form_group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text-primary);
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.form_group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Кнопка отправки формы */
+.contact_form .btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+}
+
+.contact_form .btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.contact_form .btn i {
+    font-size: 20px;
+}
+
+/* ---------- Блок «Я на связи» ---------- */
+.contacts_info {
+    background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-alt));
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    color: #ffffff;
+}
+
+.contacts_info_title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.contacts_info_text {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.contacts_info_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.contacts_info_list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.contacts_info_list i {
+    font-size: 22px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Круглые иконки соцсетей */
+.contacts_info_socials {
+    display: flex;
+    gap: 12px;
+}
+
+.contacts_info_social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.contacts_info_social:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ---------- Адаптивность ---------- */
+@media (max-width: 992px) {
+    .contacts_grid {
+        grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
+    }
+}
+
+@media (max-width: 900px) {
+    .contacts_bottom {
+        grid-template-columns: 1fr; /* Форма и информация друг под другом */
+    }
+}
+
+@media (max-width: 520px) {
+    .contacts_grid {
+        grid-template-columns: 1fr; /* Одна карточка в ряд */
+    }
+
+    .section_title {
+        font-size: 26px;
+    }
+
+    .contact_form,
+    .contacts_info {
+        padding: 24px 20px;
+    }
+}
