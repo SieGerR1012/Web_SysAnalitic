@@ -1,0 +1,141 @@
+/* ========================================================= */
+/* ---------- Секция Projects (Проекты) ---------- */
+/* Основной блок страницы — растягивается между шапкой и подвалом */
+.projects {
+    padding-top: 110px;
+    padding-bottom: 80px;
+    flex: 1;
+}
+
+/* Заголовок страницы */
+.section_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section_title span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Сетка карточек проектов: три в ряд на десктопе */
+.projects_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Карточка проекта */
+.project_card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project_card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow);
+}
+
+/* Область с превью */
+.project_card_media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.project_card_media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Лёгкое увеличение изображения при наведении */
+.project_card:hover .project_card_media img {
+    transform: scale(1.06);
+}
+
+/* Контент карточки */
+.project_card_body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Название проекта */
+.project_card_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+/* Описание проекта */
+.project_card_text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* Список технологий / тегов */
+.project_card_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.project_tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.12);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* Ссылка «Смотреть кейс» */
+.project_card_link {
+    margin-top: auto;
+    color: var(--accent);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project_card_link i {
+    font-size: 18px;
+    transition: transform 0.3s linear;
+}
+
+.project_card:hover .project_card_link i {
+    transform: translateX(8px);
+}
+
+/* ---------- Адаптивность ---------- */
+@media (max-width: 900px) {
+    .projects_grid {
+        grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
+    }
+}
+
+@media (max-width: 520px) {
+    .projects_grid {
+        grid-template-columns: 1fr; /* Одна карточка в ряд */
+    }
+
+    .section_title {
+        font-size: 26px;
+    }
+}
