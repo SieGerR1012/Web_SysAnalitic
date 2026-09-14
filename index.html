@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем общие стили для всех страниц -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем стили страницы «Главная» -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Подключаем иконки Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <title>Главная | SysAnalitic</title>
+</head>
+
+<body>
+    <!-- Шапка сайта с навигационной панелью -->
+    <header class="header">
+        <div class="container header_inner">
+            <!-- Логотип / название сайта -->
+            <a href="index.html" class="logo">A.Pavlov</a>
+
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="index.html" class="nav_link nav__link--active">Главная</a></li>
+                    <li class="nav_item"><a href="about.html" class="nav_link">О себе</a></li>
+                    <li class="nav_item"><a href="services.html" class="nav_link">Услуги</a></li>
+                    <li class="nav_item"><a href="projects.html" class="nav_link">Проекты</a></li>
+                    <li class="nav_item"><a href="contacts.html" class="nav_link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной блок главной страницы -->
+    <main class="home">
+        <div class="container home_inner">
+            <h1 class="home_name">Антон Павлов</h1>
+
+            <!-- Иконки соцсетей и фото -->
+            <div class="home_media">
+                <!-- Иконки слева от фотографии -->
+                <aside class="socials socials--left">
+                    <a href="#" class="socials_link" title="Email"><i class="bx bxs-envelope"></i></a>
+                    <a href="#" class="socials_link" title="Telegram"><i class="bx bxl-telegram"></i></a>
+                </aside>
+
+                <!-- Фотография в круглой рамке -->
+                <div class="home_avatar">
+                    <img src="accets/home.jpg" alt="Фотография Антона Павлова" class="home_photo">
+                </div>
+
+                <!-- Иконки справа от фотографии -->
+                <aside class="socials socials--right">
+                    <a href="#" class="socials_link" title="Instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="socials_link" title="GitHub"><i class="bx bxl-github"></i></a>
+                </aside>
+            </div>
+
+            <!-- Роль / профессия -->
+            <p class="home_role">Системный аналитик</p>
+
+            <!-- Короткое приветствие -->
+            <p class="home_text">Помогаю превращать хаос требований в понятные решения: анализирую бизнес-процессы, проектирую архитектуру и сопровождаю свои команды на каждом этапе.</p>
+
+            <!-- Кнопки действий -->
+            <div class="home_buttons">
+                <!-- Ссылка на резюме (PDF ещё не добавлен, ссылка-плейсхолдер) -->
+                <a href="#" class="btn btn--primary">Смотреть резюме</a>
+                <!-- Ссылка на страницу «Контакты» (страница создаётся позже) -->
+                <a href="contacts.html" class="btn btn--secondary">Контакты</a>
+            </div>
+
+            <!-- Блок ключевых качеств -->
+            <section class="qualities">
+                <h2 class="qualities_title">Ключевые качества</h2>
+
+                <!-- Сетка карточек -->
+                <div class="qualities_grid">
+                    <!-- Карточка: анализ требований -->
+                    <article class="quality-card">
+                        <i class="bx bxs-bar-chart-alt-2 quality-card_icon"></i>
+                        <h3 class="quality-card_title">Анализ требований</h3>
+                        <p class="quality-card_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    </article>
+
+                    <!-- Карточка: моделирование требований -->
+                    <article class="quality-card">
+                        <i class="bx bxs-component quality-card_icon"></i>
+                        <h3 class="quality-card_title">Моделирование процессов</h3>
+                        <p class="quality-card_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    </article>
+
+                    <!-- Карточка: работа с документацией -->
+                    <article class="quality-card">
+                        <i class="bx bxs-file-doc quality-card_icon"></i>
+                        <h3 class="quality-card_title">Техническая документация</h3>
+                        <p class="quality-card_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </article>
+
+                    <!-- Карточка: коммуникации -->
+                    <article class="quality-card">
+                        <i class="bx bxs-conversation quality-card_icon"></i>
+                        <h3 class="quality-card_title">Коммуникации</h3>
+                        <p class="quality-card_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </footer>
+</body>
+</html>

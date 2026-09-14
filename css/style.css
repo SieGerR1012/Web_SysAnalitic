@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* размеры элементов считаются вместе с рамками и отступами */
+}
+
+html {
+    scroll-behavior: smooth; /* плавная прокрутка страницы */
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif; /* основной шрифт сайта */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2c3e50; /* основной цвет текста */
+    background-color: #f7f9fc; /* светлый фон страницы */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* подвал прижимается к низу даже на коротких страницах */
+}
+
+/* Убираем стандартное подчёркивание у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- Контейнер для ограничения ширины ---------- */
+.container {
+    width: 100%;
+    max-width: 1100px; /* максимальная ширина контента */
+    margin: 0 auto; /* центрируем контейнер */
+    padding: 0 20px;
+}
+
+/* ---------- Шапка сайта и навигация ---------- */
+.header {
+    background-color: #ffffff; /* белый фон шапки */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* лёгкая тень под шапкой */
+    position: sticky;
+    top: 0; /* шапка закрепляется сверху при прокрутке */
+    z-index: 100;
+}
+
+/* Внутренний блок шапки: логотип слева, меню справа */
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+/* Логотип / название сайта */
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #d4af37; /* акцентный цвет логотипа */
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #b8962e; /* затемнение логотипа при наведении */
+}
+
+/* Список пунктов меню */
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 28px; /* расстояние между пунктами меню */
+}
+
+/* Пункты меню — вид ссылок */
+.nav_link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent; /* место под активную линию без сдвига */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Подсветка текста и нижней линии при наведении */
+.nav_link:hover {
+    color: #d4af37;
+    border-bottom-color: #d4af37;
+}
+
+/* Активный пункт меню — текущая страница */
+.nav_link--active {
+    color: #d4af37;
+    border-bottom-color: #d4af37;
+}
+
+/* ---------- Базовая кнопка ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px; /* скруглённая кнопка-«пилюля» */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+/* Основная (заливная) кнопка — общий вариант, детальнее раскрашивается в home.css */
+.btn--primary {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+/* Вторичная (контурная) кнопка — общий вариант */
+.btn--secondary {
+    background-color: transparent;
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+/* ---------- Подвал сайта ---------- */
+.footer {
+    margin-top: auto; /* прижимает подвал к низу страницы */
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 20px;
+}
+
+.footer_text {
+    font-size: 14px;
+    opacity: 0.85;
+}

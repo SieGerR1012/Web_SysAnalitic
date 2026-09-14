@@ -1,0 +1,214 @@
+.home {
+    flex: 1; /* блок занимает свободное место между шапкой и подвалом */
+    display: flex;
+    align-items: center; /* вертикальное центрирование контента */
+    padding: 60px 0;
+}
+
+/* Внутренний контейнер главной — всё по центру */
+.home_inner {
+    text-align: center; /* центрируем текст и встроенные элементы */
+}
+
+/* ---------- Имя поверх фотографии ---------- */
+.home_name {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px; /* отступ от имени до фото */
+}
+
+/* ---------- Фото с иконками по бокам ---------- */
+/* Ряд: иконки слева, фото по центру, иконки справа */
+.home_media {
+    display: flex;
+    align-items: center; /* выравнивание по вертикали */
+    justify-content: center; /* центрирование всего ряда */
+    gap: 36px; /* расстояние между иконками и фото */
+    margin-bottom: 16px; /* отступ снизу до роли */
+}
+
+/* ---------- Фотография в круглой рамке ---------- */
+.home_avatar {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0; /* фото не сжимается при нехватке ширины */
+    border-radius: 50%; /* превращаем блок в круг */
+    overflow: hidden; /* картинка не выходит за границы круга */
+    border: 5px solid #d4af37; /* акцентная рамка вокруг фото */
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35); /* мягкая тень под фото */
+}
+
+/* Картинка заполняет круг целиком */
+.home_photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* обрезаем фото пропорционально под круг */
+    display: block;
+}
+
+/* ---------- Роль под фотографией ---------- */
+.home_role {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d4af37;
+    margin-bottom: 18px; /* отступ от роли до текста */
+}
+
+/* Приветственное описание под ролью */
+.home_text {
+    max-width: 640px; /* ограничиваем ширину текста для читаемости */
+    margin: 0 auto 36px; /* центрируем и добавляем отступ до кнопок */
+    font-size: 17px;
+    color: #5a6b7c;
+}
+
+/* ---------- Кнопки под приветствием ---------- */
+/* Размещаем кнопки в ряд по центру */
+.home_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* расстояние между кнопками */
+    flex-wrap: wrap; /* разрешаем перенос на узких экранах */
+}
+
+/* Эффект при наведении на основную кнопку */
+.btn--primary:hover {
+    background-color: #b8962e;
+    transform: translateY(-2px); /* лёгкий подъём кнопки */
+}
+
+/* Эффект при наведении на вторичную кнопку */
+.btn--secondary:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* Общий стиль столбика: колонка рядом с фото */
+.socials {
+    display: flex;
+    flex-direction: column; /* иконки стоят друг под другом */
+    gap: 12px; /* расстояние между иконками */
+}
+
+/* Круглая кнопка-иконка */
+.socials_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+/* Заливка золотым при наведении */
+.socials_link:hover {
+    background-color: #d4af37;
+    border-color: #d4af37;
+    color: #ffffff;
+    transform: translateY(-3px); /* лёгкий подъём кнопки */
+}
+
+/* ========================================================= */
+/* Секция с карточками — отделяем от приветствия */
+.qualities {
+    margin-top: 64px;
+    text-align: center;
+}
+
+/* Заголовок секции */
+.qualities_title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 36px;
+}
+
+/* Сетка карточек: в ряд на десктопе */
+.qualities_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* четыре колонки одинаковой ширины */
+    gap: 24px; /* расстояние между карточками */
+    text-align: left;
+}
+
+/* Одна карточка качества */
+.quality-card {
+    background-color: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 16px; /* скругление углов карточки */
+    padding: 28px 22px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Лёгкий подъём карточки с тенью при наведении */
+.quality-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Иконка в верхней части карточки */
+.quality-card_icon {
+    display: inline-block;
+    font-size: 44px;
+    color: #d4af37; /* акцентный цвет иконки */
+    margin-bottom: 16px;
+}
+
+/* Название качества */
+.quality-card_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+/* Текст описания качества */
+.quality-card_text {
+    font-size: 15px;
+    color: #5a6b7c;
+}
+
+
+/* ========================================================= */
+/* ---------- Адаптивность ---------- */
+@media (max-width: 600px) {
+    .home__media {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home__name {
+        font-size: 30px;
+    }
+
+    .home__avatar {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* ---------- Адаптив сетки карточек ---------- */
+@media (max-width: 900px) {
+    .qualities__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .qualities__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
