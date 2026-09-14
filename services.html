@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем общие стили для всех страниц -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем стили страницы «Услуги» -->
+    <link rel="stylesheet" href="css/services.css">
+    <!-- Подключаем иконки Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <title>Услуги | A.Pavlov</title>
+</head>
+
+<body>
+    <!-- Шапка сайта с навигационной панелью -->
+    <header class="header">
+        <div class="container header_inner">
+            <!-- Логотип / название сайта -->
+            <a href="index.html" class="logo">A.Pavlov</a>
+
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="index.html" class="nav_link">Главная</a></li>
+                    <li class="nav_item"><a href="about.html" class="nav_link">О себе</a></li>
+                    <li class="nav_item"><a href="services.html" class="nav_link nav_link--active">Услуги</a></li>
+                    <li class="nav_item"><a href="projects.html" class="nav_link">Проекты</a></li>
+                    <li class="nav_item"><a href="contacts.html" class="nav_link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной блок страницы услуг -->
+    <main class="services">
+        <div class="container">
+            <h2 class="services-description">Мои <span>Услуги</span></h2>
+
+            <!-- Список услуг -->
+            <ul class="services-list">
+                <!-- Контейнер с карточками (li отвечает за расположение в линию) -->
+                <li class="services-container">
+                    <!-- Карточка: анализ требований -->
+                    <article class="services-card">
+                        <i class="bx bxs-analyse"></i>
+                        <div class="services-card_body">
+                            <h3>Анализ требований</h3>
+                            <p>Собираю и формализую требования бизнеса и пользователей: интервью, 
+                                приоритизация и согласование.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-requirements">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: моделирование процессов -->
+                    <article class="services-card">
+                        <i class="bx bxs-network-chart"></i>
+                        <div class="services-card_body">
+                            <h3>Моделирование процессов</h3>
+                            <p>Строю понятные модели в BPMN и IDEF0: текущее состояние «as-is» и целевое 
+                                «to-be».
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-modeling">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: техническая документация -->
+                    <article class="services-card">
+                        <i class="bx bxs-file-doc"></i>
+                        <div class="services-card_body">
+                            <h3>Техническая документация</h3>
+                            <p>Разрабатываю ТЗ, спецификации и user stories: от требований до полного описания 
+                                логики системы.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-docs">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: прототипирование -->
+                    <article class="services-card">
+                        <i class="bx bxs-dashboard"></i>
+                        <div class="services-card_body">
+                            <h3>Прототипирование</h3>
+                            <p>Проектирую интерфейсы и создаю прототипы решений, описываю архитектуру и 
+                                точки интеграции.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-prototyping">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: аудит текущих систем -->
+                    <article class="services-card">
+                        <i class="bx bxs-search-alt-2"></i>
+                        <div class="services-card_body">
+                            <h3>Аудит текущих систем</h3>
+                            <p>Изучаю существующие системы и процессы, нахожу узкие места и точки для 
+                                оптимизации.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-audit">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: интеграции и API -->
+                    <article class="services-card">
+                        <i class="bx bxs-plug"></i>
+                        <div class="services-card_body">
+                            <h3>Интеграции и API</h3>
+                            <p>Проектирую и описываю интеграции: REST API, обмен данными и сценарии 
+                                взаимодействия систем.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-api">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: тестирование и приёмка -->
+                    <article class="services-card">
+                        <i class="bx bxs-check-shield"></i>
+                        <div class="services-card_body">
+                            <h3>Тестирование и приёмка</h3>
+                            <p>Составляю тест-кейсы и критерии приёмки, участвую в проверке результата перед 
+                                релизом.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-testing">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <!-- Карточка: сопровождение проекта -->
+                    <article class="services-card">
+                        <i class="bx bxs-user-check"></i>
+                        <div class="services-card_body">
+                            <h3>Сопровождение проекта</h3>
+                            <p>Веду требования на всём жизненном цикле и связываю заказчика и команду 
+                                разработки.
+                            </p>
+                        </div>
+                        <a href="#" class="learn-more-btn" data-modal="modal-support">Подробнее 
+                            <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Модальное окно: анализ требований -->
+    <div class="services-modal" id="modal-requirements">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Анализ требований</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Анализ требований помогает понять, что именно нужно бизнесу и пользователям, и превратить 
+                разрозненные пожелания в формализованные и понятные команде требования.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Провожу интервью с заказчиками и пользователями</li>
+                <li><i class="bx bxs-check-circle"></i> Формализую и структурирую требования</li>
+                <li><i class="bx bxs-check-circle"></i> Приоритизирую и оцениваю трудоёмкость</li>
+                <li><i class="bx bxs-check-circle"></i> Согласую требования с командой и заказчиком</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: моделирование процессов -->
+    <div class="services-modal" id="modal-modeling">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Моделирование процессов</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Моделирование процессов помогает наглядно описать текущую работу компании и спроектировать 
+                целевые процессы до начала разработки и внедрения.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Строю модели «как есть» (as-is) и «как должно быть» (to-be)</li>
+                <li><i class="bx bxs-check-circle"></i> Проектирую процессы в BPMN, IDEF0 и диаграммах активности</li>
+                <li><i class="bx bxs-check-circle"></i> Нахожу узкие места и точки оптимизации</li>
+                <li><i class="bx bxs-check-circle"></i> Готовлю карту процессов для всей команды</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: техническая документация -->
+    <div class="services-modal" id="modal-docs">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Техническая документация</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Техническая документация фиксирует договорённости и логику системы, чтобы разработчики, 
+                тестировщики и заказчик говорили на одном языке.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Пишу ТЗ, SRS и BRD</li>
+                <li><i class="bx bxs-check-circle"></i> Составляю user stories и критерии приёмки</li>
+                <li><i class="bx bxs-check-circle"></i> Описываю API и сценарии интеграций</li>
+                <li><i class="bx bxs-check-circle"></i> Веду документацию в течение всего проекта</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: прототипирование -->
+    <div class="services-modal" id="modal-prototyping">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Прототипирование</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Прототипирование позволяет быстро и дёшево показать и проверить решение до разработки: 
+                интерфейсы, сценарии и логику работы.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Создаю кликабельные прототипы интерфейсов</li>
+                <li><i class="bx bxs-check-circle"></i> Проектирую пользовательские сценарии</li>
+                <li><i class="bx bxs-check-circle"></i> Описываю архитектуру и точки интеграции</li>
+                <li><i class="bx bxs-check-circle"></i> Провожу проверку гипотез с реальными пользователями</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: аудит текущих систем -->
+    <div class="services-modal" id="modal-audit">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Аудит текущих систем</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Аудит помогает объективно оценить текущие системы и процессы, найти узкие места и понять, 
+                что менять до начала автоматизации.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Изучаю существующие системы и документацию</li>
+                <li><i class="bx bxs-check-circle"></i> Строю карту текущих бизнес-процессов</li>
+                <li><i class="bx bxs-check-circle"></i> Выявляю потери, узкие места и несоответствия</li>
+                <li><i class="bx bxs-check-circle"></i> Готовлю отчёт с приоритизированными рекомендациями</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: интеграции и API -->
+    <div class="services-modal" id="modal-api">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Интеграции и API</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Проектирование интеграций и описаний API позволяет системам обмениваться данными предсказуемо 
+                и надёжно.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Проектирую REST API и форматы данных</li>
+                <li><i class="bx bxs-check-circle"></i> Описываю сценарии взаимодействия и обработки ошибок</li>
+                <li><i class="bx bxs-check-circle"></i> Согласую контракты с командами разработки</li>
+                <li><i class="bx bxs-check-circle"></i> Готовлю документацию для потребителей API</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: тестирование и приёмка -->
+    <div class="services-modal" id="modal-testing">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Тестирование и приёмка</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Тестирование и приёмка помогают убедиться, что система действительно соответствует требованиям 
+                и готова к релизу.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Составляю тест-кейсы и критерии приёмки</li>
+                <li><i class="bx bxs-check-circle"></i> Проверяю полноту и непротиворечивость требований</li>
+                <li><i class="bx bxs-check-circle"></i> Участвую в приёмочном тестировании</li>
+                <li><i class="bx bxs-check-circle"></i> Фиксирую и приоритизирую найденные проблемы</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно: сопровождение проекта -->
+    <div class="services-modal" id="modal-support">
+        <div class="services-modal_body">
+            <i class="bx bx-x modal-close-btn"></i>
+            <h3 class="services-modal_title">Сопровождение проекта</h3>
+            <h4 class="services-modal_subtitle">Что включает услуга?</h4>
+            <p>Сопровождение на протяжении всего жизненного цикла держит требования актуальными, а команду и 
+                заказчика — на одной волне.
+            </p>
+            <h4 class="services-modal_subtitle">Что я делаю</h4>
+            <ul class="services-modal_list">
+                <li><i class="bx bxs-check-circle"></i> Веду реестр требований и управляю изменениями</li>
+                <li><i class="bx bxs-check-circle"></i> Перевожу язык бизнеса на язык разработчиков и обратно</li>
+                <li><i class="bx bxs-check-circle"></i> Участвую в демо и планировании спринтов</li>
+                <li><i class="bx bxs-check-circle"></i> Поддерживаю команду на всех этапах разработки</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипт для модальных окон -->
+    <script src="js/main.js"></script>
+</body>
+</html>
